@@ -60,21 +60,9 @@
           <div><b>Address</b>26th Floor, Amber Gem Tower, Ajman, UAE</div>
         </div>
         <div class="contact-line">
-          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div>
-          <div><b>Phone / WhatsApp</b>+971 56 359 5889</div>
-        </div>
-        <div class="contact-line">
           <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
           <div><b>Email</b>s.oakmontuae@gmail.com</div>
         </div>
-        <div class="contact-line">
-          <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></div>
-          <div><b>License No.</b>2628315949888 — Ajman NuVentures Centre Free Zone</div>
-        </div>
-        <a href="https://wa.me/971563595889" target="_blank" rel="noopener" id="waLink" class="btn btn-dark btn-block mt-40">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 20l1.1-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg>
-          Chat on WhatsApp
-        </a>
         <div class="map-embed">
           <iframe src="https://www.google.com/maps?q=Amber%20Gem%20Tower%2C%20Sheikh%20Khalifa%20Street%2C%20Ajman%2C%20UAE&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stratton Oakmont Consulting location — Amber Gem Tower, Ajman"></iframe>
         </div>
@@ -176,12 +164,11 @@
     <div class="footer-contact">
       <h4>Contact</h4>
       <div class="contact-line"><span>26th Floor, Amber Gem Tower, Ajman, UAE</span></div>
-      <div class="contact-line"><span>+971 56 359 5889</span></div>
       <div class="contact-line"><span>s.oakmontuae@gmail.com</span></div>
     </div>
   </div>
   <div class="footer-bottom container">
-    <p>© 2026 Stratton Oakmont Consulting FZE LLC. License No. 2628315949888 — Ajman NuVentures Centre Free Zone, UAE.</p>
+    <p>© 2026 Stratton Oakmont Consulting FZE LLC. Ajman NuVentures Centre Free Zone, UAE.</p>
     <a href="terms.html">Warranty &amp; Sales Conditions</a>
   </div>
 </footer>
@@ -193,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var items = SOCart.get();
   var summaryEl = document.getElementById('quoteSummary');
   var cartField = document.getElementById('cartFieldValue');
-  var waLink = document.getElementById('waLink');
 
   if (items.length) {
     summaryEl.classList.remove('empty');
@@ -203,12 +189,6 @@ document.addEventListener('DOMContentLoaded', function () {
     summaryEl.innerHTML = '<b>Your Inquiry List</b><ul>' + rows + '</ul><div style="display:flex;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid var(--gray-300);font-weight:700"><span>Estimated Total</span><span>' + SOCart.formatAED(SOCart.total()) + '</span></div>';
     cartField.value = SOCart.summaryText();
   }
-
-  var waMessage = 'Hi Stratton Oakmont, I would like a quote.';
-  if (items.length) {
-    waMessage += '\n\n' + SOCart.summaryText();
-  }
-  waLink.href = 'https://wa.me/971563595889?text=' + encodeURIComponent(waMessage);
 });
 </script>
 </body>
